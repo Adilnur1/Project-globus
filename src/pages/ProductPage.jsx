@@ -3,7 +3,7 @@ import ProductList from "../components/product/ProductList";
 
 const ProductPage = () => {
   return (
-    <div>
+    <div className="container-product">
       <ProductList />
     </div>
   );

@@ -1,7 +1,11 @@
 import React from "react";
 
 const AddCategory = () => {
-  return <div></div>;
+  return (
+    <div>
+      <p>addcategor</p>
+    </div>
+  );
 };
 
 export default AddCategory;

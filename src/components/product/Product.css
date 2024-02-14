@@ -1,0 +1,31 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  margin-top: 100px;
+}
+.card-img {
+  width: 250px;
+  height: 250px;
+}
+nav {
+  background-color: #fff;
+}
+.card {
+  background-color: #fff;
+  width: 250px;
+  height: 450px;
+}
+.card-price {
+  width: 200px;
+  margin: 0 auto;
+}
+.card-price p {
+  margin-bottom: 20px;
+}
+.btn-group {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
