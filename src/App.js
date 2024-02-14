@@ -1,7 +1,16 @@
-import React from "react";
+import React from 'react'
+import Footer from './components/homePage/Footer'
+import MainRoutes from './routes/MainRoutes'
 
 const App = () => {
-  return <div></div>;
-};
+  return (
+    <div>
+      <Footer/>
+      {/* hello its me÷
+      boje */}
+      <MainRoutes/>
+    </div>
+  )
+}
 
-export default App;
+export default App
