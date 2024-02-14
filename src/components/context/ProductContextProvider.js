@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useReducer } from "react";
 import { useNavigate } from "react-router-dom";
-import { ACTIONS, API } from "../../helpers/const";
+import { ACTIONS, API, API_CATEGORIES } from "../../helpers/const";
 import axios from "axios";
 export const productContext = createContext();
 export const useProducts = () => useContext(productContext);
@@ -57,6 +57,19 @@ const ProductContextProvider = ({ children }) => {
     await axios.patch(`${API}/${id}`, editedProduct);
     navigate("/");
   };
+  // !GET_CATEGORIES
+  const getCategories = async () => {
+    const { data } = await axios(API_CATEGORIES);
+    dispatch({
+      type: ACTIONS.GET_CATEGORIES,
+      payload: data,
+    });
+  };
+  // !CREATE CATEGORIES
+  const createCategory = async (newCategory) => {
+    await axios.post(API_CATEGORIES, newCategory);
+    getCategories();
+  };
 
   const values = {
     addProduct,
@@ -66,6 +79,9 @@ const ProductContextProvider = ({ children }) => {
     getOneProduct,
     oneProduct: state.oneProduct,
     editProduct,
+    getCategories,
+    categories: state.categories,
+    createCategory,
   };
   return (
     <productContext.Provider value={values}>{children}</productContext.Provider>
