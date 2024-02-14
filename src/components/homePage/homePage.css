@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+.nav-logo-img img {
+  width: 80px;
+}
+.nav-logo-text {
+}
+.nav-input input {
+  position: relative;
+  border: none;
+  border: solid 2px #70c05b;
+  width: 375px;
+  height: 20px;
+  margin-left: 16px;
+  background: #ffffff;
+  background-color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 10px 0px;
+  border-radius: 4px;
+  padding-left: 15px;
+}
+.nav-input input:focus {
+  border: solid 2px #d16e12;
+}
+.nav-icons {
+  display: flex;
+  gap: 30px;
+}
+.nav-icon-item {
+}
+.i {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
