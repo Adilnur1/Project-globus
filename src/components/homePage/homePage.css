@@ -12,8 +12,8 @@
 .nav-logo-img img {
   width: 80px;
 }
-.nav-logo-text {
-}
+/* .nav-logo-text {
+} */
 .nav-input input {
   position: relative;
   border: none;
@@ -36,8 +36,8 @@
   display: flex;
   gap: 30px;
 }
-.nav-icon-item {
-}
+/* .nav-icon-item {
+} */
 .i {
   display: flex;
   flex-direction: column;

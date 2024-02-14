@@ -33,7 +33,42 @@ code {
 }
 footer{
   display: flex;
-  
+  flex-direction: column;
+  align-items: center;
 }
+.footer-menu{
+  display: flex;
+}
+.footer-div{
+  margin-left: 30px;
+}
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.footer-item1 {
+  padding-right: 10px;
+  display: flex;
+}
+.footer-item2{
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
 
+}
+.xs{
+  margin: 10px;
+}
+.foot {
+  padding-right: 20px;
+  text-decoration: none;
+  color: #414141;
+}
+.foot:hover{
+  color: #f0531f;
+  transition: 0.7s;
+} 
 
