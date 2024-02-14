@@ -5,8 +5,8 @@ import Navbar from "./components/homePage/Navbar";
 const App = () => {
   return (
     <div>
-      <MainRoutes />
       <Navbar />
+      <MainRoutes />
     </div>
   );
 };

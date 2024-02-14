@@ -1,7 +1,39 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #fbf8ec;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.container-product {
+  display: flex;
+  justify-content: center;
+}
+.header {
+  height: 200px;
+  background: url("./components/homePage/assets/Group\ 7105.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-img img {
+  width: 400px;
+  margin-top: 40px;
+}
+.header-text {
+  font-weight: 700;
+  font-size: 35px;
+}
 footer{
   display: flex;
   
 }
 
 
-/* adsfasdf */
