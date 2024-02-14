@@ -1,16 +1,14 @@
-import React from 'react'
-import Footer from './components/homePage/Footer'
-import MainRoutes from './routes/MainRoutes'
+import React from "react";
+import MainRoutes from "./routes/MainRoutes";
+import Navbar from "./components/homePage/Navbar";
 
 const App = () => {
   return (
     <div>
-      <Footer/>
-      {/* hello its me÷
-      boje */}
-      <MainRoutes/>
+      <MainRoutes />
+      <Navbar />
     </div>
-  )
-}
+  );
+};
 
 export default App
