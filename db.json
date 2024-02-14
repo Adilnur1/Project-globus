@@ -1,3 +1,11 @@
 {
-  "products": []
+  "products": [
+    {
+      "image": "https://images.asics.com/is/image/asics/1021A285_100_SR_RT_GLB?$sfcc-product$",
+      "name": "Jhon",
+      "price": 129,
+      "id": 1
+    }
+  ],
+  "categories": []
 }
