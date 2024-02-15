@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useProducts } from "../context/ProductContextProvider";
 import { useNavigate } from "react-router-dom";
 import "./Product.css";
@@ -10,11 +10,16 @@ import { ADMIN } from "../../helpers/const";
 
 const ProductCard = ({ elem }) => {
   const { user } = useAuth();
+import Details from "./Details";
+
+const ProductCard = ({ elem }) => {
+ 
+
   const navigate = useNavigate();
   const { deleteProduct } = useProducts();
   return (
     <div className="card">
-      <img className="card-img" src={elem.image} alt="" />
+      <img className="card-img" onClick={heandelOpen} src={elem.image} alt="" />
       <div className="card-price">
         <p style={{ fontWeight: "bold", fontSize: "17px" }}>{elem.name}</p>
         <p style={{ color: "green", fontWeight: "bold" }}>{elem.price} ⃀</p>
