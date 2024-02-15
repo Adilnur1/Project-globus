@@ -25,50 +25,220 @@ code {
 }
 .header-img img {
   width: 400px;
-  margin-top: 40px;
+  margin-top: 80px;
 }
 .header-text {
   font-weight: 700;
   font-size: 35px;
 }
-footer{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+.discount-card {
+  max-width: 1150px;
+  margin: 0 auto;
 }
-.footer-menu{
-  display: flex;
+.discount-card-text {
+  font-weight: 700;
+  font-size: 35px;
+  margin-top: 100px;
 }
-.footer-div{
-  margin-left: 30px;
-}
-.footer{
+.discount-card-cards {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
+}
+.map {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+.map-text {
+  font-weight: 700;
+  font-size: 35px;
+  margin-top: 100px;
+}
+.map-btns {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.map-btn1 {
+  border: 0;
+  padding: 10px;
+  margin-right: 20px;
+  color: gray;
+  transition: 0.5s;
+}
+.map-btn1:hover {
+  color: #ffffff;
+  background-color: rgba(112, 192, 91, 1);
+  transition: 0.5s;
+}
+.map-btn2:hover {
+  color: #ffffff;
+  background-color: rgba(112, 192, 91, 1);
+  transition: 0.5s;
+}
+.map-btn3:hover {
+  color: #ffffff;
+  background-color: rgba(112, 192, 91, 1);
+  transition: 0.5s;
+}
+.map-btn4:hover {
+  color: #ffffff;
+  background-color: rgba(112, 192, 91, 1);
+  transition: 0.5s;
+}
+.map-btn2 {
+  border: 0;
+  margin-right: 20px;
+  color: gray;
+  padding: 10px;
+  transition: 0.5s;
+}
+.map-btn3 {
+  border: 0;
+  margin-right: 20px;
+  color: gray;
+  padding: 10px;
+  transition: 0.5s;
+}
+.map-btn4 {
+  border: 0;
+  color: gray;
+  padding: 10px;
+  transition: 0.5s;
+}
+.info {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+.info-text {
+  font-weight: 700;
+  font-size: 35px;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+.info-item {
+  display: flex;
+  justify-content: center;
+}
+.info-img {
+  margin: calc(var(--index) / 3);
+  background: #ffffff;
+  height: 440px;
+}
+
+.info-date {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #8f8f8f;
+  font-weight: 400;
+  font-size: 12px;
+  margin-left: 10px;
+}
+.info-words {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  color: #414141;
+  line-height: 150%;
+  padding-bottom: 10px;
+  margin-left: 10px;
+}
+.info-wordss {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  color: #414141;
+  line-height: 150%;
+  padding-bottom: 10px;
+  margin-left: 10px;
+}
+.info-words2 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  /* or 24px */
+
+  /* Main/onSurface */
+
+  color: #414141;
+  padding-bottom: 15px;
+  margin-left: 10px;
+}
+.info-cards-title {
+  display: flex;
+  justify-content: space-between;
+}
+.button {
+  font-weight: 900;
+  font-size: 16px;
+  margin-left: 10px;
+  color: #70c05b;
+  background-color: #6fc05b68;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  border: 0;
+}
+
+.button:hover {
+  color: #fff;
+  background: #70c05b;
+  transition: 1s;
+}
+
+.buttonn:hover {
+  color: #fff;
+  background: #70c05b;
+  transition: 1s;
+}
+.buttonn {
+  font-weight: 900;
+  font-size: 16px;
+  margin-left: 10px;
+  margin-top: 30px;
+  margin-bottom: 3px;
+  color: #70c05b;
+  margin-bottom: 10px;
+  background-color: #6fc05b68;
+  padding: 10px 20px;
+  border: 0;
+}
+/*! footer */
+footer {
+  background-color: #fff;
+  margin-top: 30px;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1130px;
+  margin: 0 auto;
   padding-top: 50px;
   padding-bottom: 50px;
 }
-.footer-item1 {
-  padding-right: 10px;
+.footer-menu {
+  display: flex;
+  align-items: center;
+}
+.footer-icons {
+  display: flex;
+  align-items: center;
+}
+.ftr {
   display: flex;
 }
-.footer-item2{
-  padding-left: 10px;
-  padding-right: 10px;
+.footer-item2 {
   display: flex;
-
+  gap: 20px;
 }
-.xs{
-  margin: 10px;
+.footer-phone {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: 20px;
 }
-.foot {
-  padding-right: 20px;
-  text-decoration: none;
-  color: #414141;
+.footer-menu {
+  display: flex;
+  gap: 10px;
 }
-.foot:hover{
-  color: #f0531f;
-  transition: 0.7s;
-} 
-

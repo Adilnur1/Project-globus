@@ -14,8 +14,7 @@
 }
 /* .nav-logo-text {
 } */
-.nav-input input {
-  position: relative;
+.inp {
   border: none;
   border: solid 2px #70c05b;
   width: 375px;
@@ -28,6 +27,15 @@
   padding: 10px 0px;
   border-radius: 4px;
   padding-left: 15px;
+}
+.nav-input {
+  position: relative;
+}
+.search {
+  position: absolute;
+  right: 10px;
+  color: #70c05b;
+  top: 10px;
 }
 .nav-input input:focus {
   border: solid 2px #d16e12;

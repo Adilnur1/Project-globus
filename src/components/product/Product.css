@@ -6,7 +6,7 @@
 }
 .card-img {
   width: 250px;
-  height: 250px;
+  height: 300px;
 }
 nav {
   background-color: #fff;
@@ -14,7 +14,7 @@ nav {
 .card {
   background-color: #fff;
   width: 250px;
-  height: 450px;
+  height: 500px;
 }
 .card-price {
   width: 200px;
