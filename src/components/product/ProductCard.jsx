@@ -5,8 +5,11 @@ import "./Product.css";
 import { Button, Rating } from "@mui/material";
 import { Stack } from "@mui/system";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import { useAuth } from "../context/AuthContextProvider";
+import { ADMIN } from "../../helpers/const";
 
 const ProductCard = ({ elem }) => {
+  const { user } = useAuth();
   const navigate = useNavigate();
   const { deleteProduct } = useProducts();
   return (
@@ -19,22 +22,25 @@ const ProductCard = ({ elem }) => {
           <Rating name="half-rating" defaultValue={0} precision={1} />
         </Stack>
         <div>
-          <div className="btn-group">
-            <Button
-              variant="outlined"
-              color="error"
-              onClick={() => deleteProduct(elem.id)}
-            >
-              DELETE
-            </Button>
-            <Button
-              variant="outlined"
-              onClick={() => navigate(`/edit/${elem.id}`)}
-            >
-              EDIT
-            </Button>
+          {user.email === ADMIN ? (
+            <div className="btn-group">
+              <Button
+                variant="outlined"
+                color="error"
+                onClick={() => deleteProduct(elem.id)}
+              >
+                DELETE
+              </Button>
+              <Button
+                variant="outlined"
+                onClick={() => navigate(`/edit/${elem.id}`)}
+              >
+                EDIT
+              </Button>
+            </div>
+          ) : (
             <AddShoppingCartIcon sx={{ color: "green" }} />
-          </div>
+          )}
         </div>
       </div>
     </div>
