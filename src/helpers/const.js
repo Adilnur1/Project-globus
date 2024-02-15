@@ -6,4 +6,4 @@ export const ACTIONS = {
   GET_CATEGORIES: "GET_CATEGORIES",
   GET_CART: "GET_CART",
 };
-export const ADMIN = "admin@gamil.com";
+export const ADMIN = "admin@gmail.com";
