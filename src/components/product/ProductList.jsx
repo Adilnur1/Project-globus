@@ -17,7 +17,7 @@ const ProductList = () => {
   }, [searchParams]);
   // ! PAGINATION
   const [page, setPage] = useState(1);
-  const itemPerPage = 4;
+  const itemPerPage = 3;
   const count = Math.ceil(products.length / itemPerPage);
   console.log(count);
   const currentData = () => {

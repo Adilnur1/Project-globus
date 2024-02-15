@@ -1,13 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useProducts } from "../context/ProductContextProvider";
+import CategorySelect from "./CategorySelect";
+import { Button, TextField, Typography } from "@mui/material";
 
 const AddProduct = () => {
-  const { addProduct } = useProducts();
+  const { addProduct, categories, getCategories } = useProducts();
   const [product, setProduct] = useState({
     image: "",
     name: "",
     price: "",
   });
+  useEffect(() => {
+    getCategories();
+  }, []);
+  console.log(categories);
 
   const handleInput = (e) => {
     if (e.target.name === "price") {
@@ -29,27 +35,28 @@ const AddProduct = () => {
   };
 
   return (
-    <div>
-      <p>ADMIN PAGE</p>
-      <input
+    <div className="addProduct">
+      <Typography>ADMIN PAGE</Typography>
+      <TextField
         type="text"
         name="image"
-        placeholder="Image"
+        placeholder="Картина"
         onChange={handleInput}
       />
-      <input
+      <CategorySelect categories={categories} handleInput={handleInput} />
+      <TextField
         type="text"
         name="name"
-        placeholder="Name"
+        placeholder="Название"
         onChange={handleInput}
       />
-      <input
+      <TextField
         type="number"
         name="price"
-        placeholder="Price"
+        placeholder="Цена"
         onChange={handleInput}
       />
-      <button onClick={handleClick}>Добавить продукт</button>
+      <Button onClick={handleClick}>Добавить продукт</Button>
     </div>
   );
 };

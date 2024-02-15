@@ -23,6 +23,7 @@ const ProductCard = ({ elem }) => {
       <div className="card-price">
         <p style={{ fontWeight: "bold", fontSize: "17px" }}>{elem.name}</p>
         <p style={{ color: "green", fontWeight: "bold" }}>{elem.price} ⃀</p>
+        <p>{elem.category}</p>
         <Stack>
           <Rating name="half-rating" defaultValue={0} precision={1} />
         </Stack>
