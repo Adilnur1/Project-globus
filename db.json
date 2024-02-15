@@ -1,53 +1,69 @@
 {
   "products": [
     {
-      "image": "https://cdn-img.perekrestok.ru/i/800x800-fit/xdelivery/files/52/c9/28084f54cb0ac38ab531c69c558a.jpg",
-      "name": "Молоко 1,5%",
-      "price": 129,
-      "id": 1
-    },
-    {
       "image": "https://detki.kg/image/products/1187/659.jpg",
-      "name": "fwfewf",
-      "price": 232112,
+      "name": "Фруто Няня",
+      "category": "Напитки",
+      "price": 232,
       "id": 2
     },
     {
       "image": "https://taumart.ru/upload/resize_cache/webp/upload/iblock/65f/h5o0yh8ynsz1urpg2elrxqtrul21946m.webp",
-      "name": "чечел",
+      "name": "Чечел",
+      "category": "Сыр",
       "price": 212,
       "id": 3
     },
     {
-      "image": "https://globus-online.kg/upload/iblock/ab3/1h7khc88tc4drabx3xwdzgwu7y85pvms/82a204e8-6721-11ed-80c8-005056845eda.png",
-      "name": "Колбаса DAS сервелат  ",
-      "price": 3432432,
-      "id": 4
-    },
-    {
       "image": "data:image/jpeg;base64,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",
-      "name": "Jhon",
+      "name": "Добрый",
+      "category": "Напитки",
       "price": 129,
       "id": 5
     },
     {
-      "image": "https://detki.kg/image/products/1187/659.jpg",
-      "name": "fwfewf",
-      "price": 232112,
+      "image": "https://arbuz.kz/image/s3/arbuz-kz-products/261918-kolbasa_das_servelat_finskii_polukopchenyi_600_g.jpg?w=300&h=300&_c=1706406400",
+      "name": "Салих ",
+      "category": "Колбаса",
+      "price": 343,
+      "id": 8
+    },
+    {
+      "image": "https://cdn-img.perekrestok.ru/i/800x800-fit/xdelivery/files/52/c9/28084f54cb0ac38ab531c69c558a.jpg",
+      "name": "Простоквашена",
+      "price": 110,
+      "category": "Молоко",
+      "id": 10
+    }
+  ],
+  "categories": [
+    {
+      "name": "Молоко",
+      "id": 1
+    },
+    {
+      "name": "Сыр",
+      "id": 2
+    },
+    {
+      "name": "Колбаса",
+      "id": 3
+    },
+    {
+      "name": "Мясо",
+      "id": 4
+    },
+    {
+      "name": "Курица",
+      "id": 5
+    },
+    {
+      "name": "Напитки",
       "id": 6
     },
     {
-      "image": "https://taumart.ru/upload/resize_cache/webp/upload/iblock/65f/h5o0yh8ynsz1urpg2elrxqtrul21946m.webp",
-      "name": "wfwefwe",
-      "price": 212,
+      "name": "Конфеты",
       "id": 7
-    },
-    {
-      "image": "https://arbuz.kz/image/s3/arbuz-kz-products/261918-kolbasa_das_servelat_finskii_polukopchenyi_600_g.jpg?w=300&h=300&_c=1706406400",
-      "name": "qq ",
-      "price": 3432432,
-      "id": 8
     }
-  ],
-  "categories": []
+  ]
 }
