@@ -9,6 +9,7 @@ import AdminPage from "../pages/AdminPage";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { useAuth } from "../components/context/AuthContextProvider";
 import { ADMIN } from "../helpers/const";
+import LikePage from "../pages/LikePage";
 
 const MainRoutes = () => {
   const { user } = useAuth();
@@ -19,6 +20,7 @@ const MainRoutes = () => {
     { id: 3, link: "*", element: <NotFoundPage /> },
     { id: 4, link: "/cart", element: <CartPage /> },
     { id: 5, link: "/auth", element: <AuthPage /> },
+    { id: 6, link: "/like", element: <LikePage /> },
   ];
   const PRIVATE_ROUTES = [
     { id: 6, link: "/edit/:id", element: <EditPage /> },

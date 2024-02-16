@@ -1,6 +1,7 @@
 import { Box, Button, Modal, TextField } from "@mui/material";
 import React, { useState } from "react";
-import FavoriteIcon from "@mui/icons-material/Favorite";
+import BookmarkIcon from "@mui/icons-material/Bookmark";
+import { useLike } from "../context/FavoritesContextProvider";
 
 const Details = (props) => {
   const style = {
@@ -22,12 +23,7 @@ const Details = (props) => {
   const handleChange = (e) => {
     setNewComment(e.target.value);
   };
-  const handleLikeDetails = () => {
-    setLike(!like);
-  };
-  const likeStyle = {
-    color: like ? "red" : "lightgrey",
-  };
+
   const handleSubmit = () => {
     if (newComment.trim() !== "") {
       setComments([...comments, newComment]);
@@ -35,6 +31,8 @@ const Details = (props) => {
     }
   };
 
+  const { addProductsToLike, checkProductInLike, deleteProductFromLike } =
+    useLike();
   return (
     <Modal
       open={open}
@@ -66,7 +64,12 @@ const Details = (props) => {
           >
             {elem.price} ⃀
           </strong>
-          <FavoriteIcon style={likeStyle} onClick={handleLikeDetails} />
+          <BookmarkIcon
+            sx={{
+              color: checkProductInLike(elem.id) ? "green" : "",
+            }}
+            onClick={() => addProductsToLike(elem)}
+          />
 
           <p></p>
           <div style={{ display: "flex" }}>
