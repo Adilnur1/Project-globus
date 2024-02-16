@@ -78,24 +78,30 @@ const Navbar = () => {
           </Link>
         ) : null}
         <div className="nav-icons">
-          <div className="i">
+          <Link
+            className="i"
+            to={"/like"}
+            style={{ textDecoration: "none", color: "black" }}
+          >
             <FavoriteBorderIcon
               className="icon-css"
               sx={{ display: "flex", justifyContent: "center" }}
             />
             <div className="nav-icon-item">Избранное</div>
-          </div>
-          <div className="i">
-            <Link to={"/cart"}>
-              <Badge badgeContent={badgeCount} color="success">
-                <ShoppingCartIcon
-                  className="icon-css"
-                  sx={{ display: "flex", justifyContent: "center" }}
-                />
-              </Badge>
-              <div className="nav-icon-item">Корзинка</div>
-            </Link>
-          </div>
+          </Link>
+          <Link
+            to={"/cart"}
+            className="i"
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            <Badge badgeContent={badgeCount} color="success">
+              <ShoppingCartIcon
+                className="icon-css"
+                sx={{ display: "flex", justifyContent: "center" }}
+              />
+            </Badge>
+            <div className="nav-icon-item">Корзинка</div>
+          </Link>
         </div>
         <div style={{ display: "flex", alignItems: "center" }}>
           <Typography sx={{ marginRight: "10px" }}>

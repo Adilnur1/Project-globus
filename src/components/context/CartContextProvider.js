@@ -78,7 +78,7 @@ const CartContextProvider = ({ children }) => {
       payload: cart,
     });
   };
-  // !CHECK PRODUCT IN CART
+  // ! CHECK PRODUCT IN CART
   const checkProductInCart = (id) => {
     let cart = getLocalStorage();
     if (cart) {

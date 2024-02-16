@@ -1,5 +1,7 @@
 import { Box, Button, Modal, TextField } from "@mui/material";
 import React, { useState } from "react";
+import BookmarkIcon from "@mui/icons-material/Bookmark";
+import { useLike } from "../context/FavoritesContextProvider";
 
 const Details = (props) => {
   const style = {
@@ -17,6 +19,7 @@ const Details = (props) => {
   const { elem, open, handleClose } = props;
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState("");
+  const [like, setLike] = useState(false);
   const handleChange = (e) => {
     setNewComment(e.target.value);
   };
@@ -27,6 +30,9 @@ const Details = (props) => {
       setNewComment("");
     }
   };
+
+  const { addProductsToLike, checkProductInLike, deleteProductFromLike } =
+    useLike();
   return (
     <Modal
       open={open}
@@ -48,9 +54,23 @@ const Details = (props) => {
         <div style={{ margin: "30px" }}>
           <h1>{elem.name}</h1>
           <p style={{ marginTop: "10px", fontSize: "20px" }}>{elem.category}</p>
-          <strong style={{ color: "green", fontSize: "20px" }}>
+          <strong
+            style={{
+              color: "green",
+              fontSize: "20px",
+              marginRight: "200px",
+              marginBottom: "50px",
+            }}
+          >
             {elem.price} ⃀
           </strong>
+          <BookmarkIcon
+            sx={{
+              color: checkProductInLike(elem.id) ? "green" : "",
+            }}
+            onClick={() => addProductsToLike(elem)}
+          />
+
           <p></p>
           <div style={{ display: "flex" }}>
             <TextField

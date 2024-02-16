@@ -16,6 +16,7 @@ const ProductCard = ({ elem }) => {
   const { deleteProduct } = useProducts();
   const { addProductToCart, checkProductInCart, deleteProductFromCart } =
     useCart();
+
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const handleOpen = () => setOpen(true);
@@ -73,7 +74,9 @@ const ProductCard = ({ elem }) => {
             >
               <IconButton
                 sx={{
-                  backgroundColor: checkProductInCart(elem.id) ? "black" : "",
+                  backgroundColor: checkProductInCart(elem.id)
+                    ? "lightgreen"
+                    : "",
                   color: checkProductInCart(elem.id) ? "white" : "",
                 }}
                 onClick={() => addProductToCart(elem)}

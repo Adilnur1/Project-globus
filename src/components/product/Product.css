@@ -4,6 +4,16 @@
   gap: 50px;
   margin-top: 100px;
 }
+.list-like {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  padding-top: 50px;
+}
+.like-cont {
+  display: flex;
+  justify-content: center;
+}
 .card-img {
   width: 250px;
   height: 250px;
@@ -18,6 +28,12 @@ nav {
   background-color: #fff;
   width: 250px;
   height: 490px;
+  border-radius: 0 0 10px 10px;
+}
+.cardd {
+  background-color: #fff;
+  width: 250px;
+  height: 450px;
   border-radius: 0 0 10px 10px;
 }
 .card-price {

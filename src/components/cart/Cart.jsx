@@ -10,6 +10,7 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 const Cart = () => {
   const { cart, getCart, changeProductCount, deleteProductFromCart } =
@@ -23,7 +24,7 @@ const Cart = () => {
   };
   console.log(cart);
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} sx={{ heght: "600px" }}>
       <Table aria-label="simple table" sx={{ minWidth: 650 }}>
         <TableHead>
           <TableRow>
@@ -62,9 +63,10 @@ const Cart = () => {
               </TableCell>
               <TableCell align="right">{elem.subPrice}</TableCell>
               <TableCell align="right">
-                <Button onClick={() => deleteProductFromCart(elem.item.id)}>
-                  DELETE
-                </Button>
+                <DeleteIcon
+                  sx={{ color: "red" }}
+                  onClick={() => deleteProductFromCart(elem.item.id)}
+                />
               </TableCell>
             </TableRow>
           ))}

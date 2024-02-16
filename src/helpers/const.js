@@ -5,5 +5,6 @@ export const ACTIONS = {
   GET_ONE_PRODUCT: "GET_ONE_PRODUCT",
   GET_CATEGORIES: "GET_CATEGORIES",
   GET_CART: "GET_CART",
+  GET_LIKE: "GET_LIKE",
 };
 export const ADMIN = "admin@gmail.com";
