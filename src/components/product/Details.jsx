@@ -1,5 +1,6 @@
 import { Box, Button, Modal, TextField } from "@mui/material";
 import React, { useState } from "react";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 
 const Details = (props) => {
   const style = {
@@ -17,16 +18,23 @@ const Details = (props) => {
   const { elem, open, handleClose } = props;
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState("");
+  const [like, setLike] = useState(false);
   const handleChange = (e) => {
     setNewComment(e.target.value);
   };
-
+  const handleLikeDetails = () => {
+    setLike(!like);
+  };
+  const likeStyle = {
+    color: like ? "red" : "lightgrey",
+  };
   const handleSubmit = () => {
     if (newComment.trim() !== "") {
       setComments([...comments, newComment]);
       setNewComment("");
     }
   };
+
   return (
     <Modal
       open={open}
@@ -48,9 +56,18 @@ const Details = (props) => {
         <div style={{ margin: "30px" }}>
           <h1>{elem.name}</h1>
           <p style={{ marginTop: "10px", fontSize: "20px" }}>{elem.category}</p>
-          <strong style={{ color: "green", fontSize: "20px" }}>
+          <strong
+            style={{
+              color: "green",
+              fontSize: "20px",
+              marginRight: "200px",
+              marginBottom: "50px",
+            }}
+          >
             {elem.price} ⃀
           </strong>
+          <FavoriteIcon style={likeStyle} onClick={handleLikeDetails} />
+
           <p></p>
           <div style={{ display: "flex" }}>
             <TextField
