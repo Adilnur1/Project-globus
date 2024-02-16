@@ -1,0 +1,63 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  margin-top: 100px;
+}
+.list-like {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  padding-top: 50px;
+}
+.like-cont {
+  display: flex;
+  justify-content: center;
+}
+.card-img {
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px 10px 0 0;
+}
+nav {
+  background-color: #fff;
+}
+.card {
+  background-color: #fff;
+  width: 250px;
+  height: 490px;
+  border-radius: 0 0 10px 10px;
+}
+.cardd {
+  background-color: #fff;
+  width: 250px;
+  height: 450px;
+  border-radius: 0 0 10px 10px;
+}
+.card-price {
+  width: 220px;
+  margin: 0 auto;
+}
+.card-price p {
+  margin-bottom: 20px;
+}
+.btn-group {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+.addProduct {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 2% 0% 0% 40%;
+}
+.comment {
+  background: #70c05b;
+  color: white;
+  padding: 10px;
+  border-radius: 15px 15px 15px 0px;
+}
