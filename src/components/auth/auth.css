@@ -1,0 +1,12 @@
+.discount-card-cards-item img {
+  transition: transform 400ms ease;
+  width: 560px;
+  cursor: pointer;
+}
+.discount-card-cards-item img:hover {
+  transform: scale(1.05);
+}
+.discount-card-cards {
+  display: flex;
+  justify-content: space-between;
+}

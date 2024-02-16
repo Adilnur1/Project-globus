@@ -100,7 +100,7 @@ const HomePage = () => {
           </div>
           <div className="info-card2">
             <div class="info-img">
-              <img class="rrr" src={infoImg3} alt="" />
+              <img class="rrr" src={infoImg2} alt="" />
               <div class="info-date">05.03.2021</div>
               <div class="info-wordss">Весеннее настроение для каждой</div>
               <div class="info-words2">

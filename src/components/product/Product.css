@@ -6,7 +6,10 @@
 }
 .card-img {
   width: 250px;
-  height: 300px;
+  height: 250px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px 10px 0 0;
 }
 nav {
   background-color: #fff;
@@ -14,10 +17,11 @@ nav {
 .card {
   background-color: #fff;
   width: 250px;
-  height: 500px;
+  height: 490px;
+  border-radius: 0 0 10px 10px;
 }
 .card-price {
-  width: 200px;
+  width: 220px;
   margin: 0 auto;
 }
 .card-price p {
@@ -35,4 +39,9 @@ nav {
   width: 300px;
   margin: 2% 0% 0% 40%;
 }
-/* sideBar */
+.comment {
+  background: #70c05b;
+  color: white;
+  padding: 10px;
+  border-radius: 15px 15px 15px 0px;
+}

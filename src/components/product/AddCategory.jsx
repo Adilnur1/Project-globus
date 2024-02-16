@@ -20,7 +20,7 @@ const AddCategory = (props) => {
     handleClose();
   };
   return (
-    <div>
+    <div style={{ marginTop: "50px" }}>
       <Modal onClose={handleClose} open={open}>
         <Box
           sx={{
