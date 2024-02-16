@@ -67,7 +67,6 @@ const AuthContextProvider = ({ children }) => {
   };
   const authListener = () => {
     fire.auth().onAuthStateChanged((user) => {
-      console.log(user);
       if (user) {
         setUser(user);
       } else {
