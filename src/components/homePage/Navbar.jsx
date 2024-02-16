@@ -5,6 +5,7 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import {
   Avatar,
+  Badge,
   Box,
   IconButton,
   Menu,
@@ -12,27 +13,34 @@ import {
   Tooltip,
   Typography,
 } from "@mui/material";
-import { useProducts } from "../context/ProductContextProvider";
 import { Link, useSearchParams } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import { ADMIN } from "../../helpers/const";
 import { useAuth } from "../context/AuthContextProvider";
+import { useCart } from "../context/CartContextProvider";
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-  const { categories, getCategories, fetchByParams } = useProducts();
+  const [badgeCount, setBadgeCount] = useState(0);
   const [searchParams, setSearchParams] = useSearchParams();
+  const { user, handleLogOut } = useAuth();
+  const { addProductToCart, getProductsCountInCart } = useCart();
   const [search, setSearch] = useState(searchParams.get("q") || "");
+  useEffect(() => {
+    setBadgeCount(getProductsCountInCart());
+  }, [addProductToCart]);
+
   useEffect(() => {
     setSearchParams({
       q: search,
     });
   }, [search]);
-  const { user, handleLogOut } = useAuth();
+
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
+
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
   };
@@ -78,11 +86,15 @@ const Navbar = () => {
             <div className="nav-icon-item">Избранное</div>
           </div>
           <div className="i">
-            <ShoppingCartIcon
-              className="icon-css"
-              sx={{ display: "flex", justifyContent: "center" }}
-            />
-            <div className="nav-icon-item">Корзинка</div>
+            <Link to={"/cart"}>
+              <Badge badgeContent={badgeCount} color="success">
+                <ShoppingCartIcon
+                  className="icon-css"
+                  sx={{ display: "flex", justifyContent: "center" }}
+                />
+              </Badge>
+              <div className="nav-icon-item">Корзинка</div>
+            </Link>
           </div>
         </div>
         <div style={{ display: "flex", alignItems: "center" }}>
