@@ -35,7 +35,7 @@ const AddProduct = () => {
   };
 
   return (
-    <div className="addProduct">
+    <div className="addProduct" style={{ height: "440px" }}>
       <Typography>ADMIN PAGE</Typography>
       <TextField
         type="text"

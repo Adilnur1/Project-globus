@@ -4,6 +4,7 @@ import {
   FormControl,
   FormControlLabel,
   FormLabel,
+  Paper,
   Radio,
   RadioGroup,
 } from "@mui/material";
@@ -14,14 +15,20 @@ const SideBar = () => {
     getCategories();
   }, []);
   return (
-    <div>
+    <Paper sx={{ width: "300px", marginBottom: "60px" }}>
       <FormControl>
-        <FormLabel id="demo-radio-buttons-group-label">Категории</FormLabel>
+        <FormLabel
+          sx={{ marginLeft: "50px", marginTop: "20px" }}
+          id="demo-radio-buttons-group-label"
+        >
+          Категории
+        </FormLabel>
         <RadioGroup
           aria-labelledby="demo-radio-buttons-group-label"
           defaultValue="female"
           name="radio-buttons-group"
           onChange={(e) => fetchByParams("category", e.target.value)}
+          sx={{ marginLeft: "50px", marginTop: "20px", marginBottom: "50px" }}
         >
           <FormControlLabel control={<Radio />} value={"all"} label={"ALL"} />
           {categories.map((elem) => (
@@ -34,7 +41,7 @@ const SideBar = () => {
           ))}
         </RadioGroup>
       </FormControl>
-    </div>
+    </Paper>
   );
 };
 

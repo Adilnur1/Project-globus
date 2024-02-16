@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useProducts } from "../context/ProductContextProvider";
+import { Button, TextField, Typography } from "@mui/material";
 
 const EditProduct = () => {
   const { id } = useParams();
@@ -31,29 +32,30 @@ const EditProduct = () => {
     }
   }, [oneProduct]);
   return (
-    <div>
-      <input
+    <div className="addProduct" style={{ height: "440px" }}>
+      <Typography>EDIT PAGE</Typography>
+      <TextField
         value={product.image}
         type="text"
         name="image"
         placeholder="Image"
         onChange={handleInput}
-      />
-      <input
+      ></TextField>
+      <TextField
         value={product.name}
         type="text"
         name="name"
         placeholder="Name"
         onChange={handleInput}
-      />
-      <input
+      ></TextField>
+      <TextField
         value={product.price}
         type="number"
         name="price"
         placeholder="Price"
         onChange={handleInput}
-      />
-      <button onClick={handleClick}>Сохранить изменения</button>
+      ></TextField>
+      <Button onClick={handleClick}>Сохранить изменения</Button>
     </div>
   );
 };
