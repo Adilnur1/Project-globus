@@ -2,23 +2,30 @@ import React, { useState } from "react";
 import { useProducts } from "../context/ProductContextProvider";
 import { Link, useNavigate } from "react-router-dom";
 import "./Product.css";
-import { Button, Rating } from "@mui/material";
+import { Button, IconButton, Rating } from "@mui/material";
 import { Stack } from "@mui/system";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { useAuth } from "../context/AuthContextProvider";
 import { ADMIN } from "../../helpers/const";
 import Details from "./Details";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import { useCart } from "../context/CartContextProvider";
 
 const ProductCard = ({ elem }) => {
   const { user } = useAuth();
   const { deleteProduct } = useProducts();
+  const { addProductToCart, checkProductInCart, deleteProductFromCart } =
+    useCart();
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const [liked, setLiked] = useState(false);
 
+  const handleClick = () => {
+    deleteProductFromCart(elem.id);
+    deleteProduct(elem.id);
+  };
   const handleLikeClick = () => {
     setLiked(!liked);
   };
@@ -30,7 +37,6 @@ const ProductCard = ({ elem }) => {
   };
   return (
     <div className="card">
-      <img className="card-img" src={elem.image} alt="" />
       <img
         className="card-img"
         onClick={handleOpen}
@@ -47,11 +53,7 @@ const ProductCard = ({ elem }) => {
         <div>
           {user.email === ADMIN ? (
             <div className="btn-group">
-              <Button
-                variant="outlined"
-                color="error"
-                onClick={() => deleteProduct(elem.id)}
-              >
+              <Button variant="outlined" color="error" onClick={handleClick}>
                 DELETE
               </Button>
               <Button
@@ -69,7 +71,15 @@ const ProductCard = ({ elem }) => {
                 justifyContent: "space-between",
               }}
             >
-              <AddShoppingCartIcon sx={{ color: "green" }} />
+              <IconButton
+                sx={{
+                  backgroundColor: checkProductInCart(elem.id) ? "black" : "",
+                  color: checkProductInCart(elem.id) ? "white" : "",
+                }}
+                onClick={() => addProductToCart(elem)}
+              >
+                <AddShoppingCartIcon sx={{ color: "green" }} />
+              </IconButton>
               <FavoriteIcon style={buttonStyle} onClick={handleLikeClick} />
             </div>
           )}

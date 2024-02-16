@@ -9,8 +9,6 @@ import AdminPage from "../pages/AdminPage";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { useAuth } from "../components/context/AuthContextProvider";
 import { ADMIN } from "../helpers/const";
-import { Route, Routes } from "react-router-dom";
-import Details from "../components/product/Details";
 
 const MainRoutes = () => {
   const { user } = useAuth();
