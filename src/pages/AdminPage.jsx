@@ -8,7 +8,7 @@ const AdminPage = () => {
   const handleClose = () => setOpen(false);
   const handleOpen = () => setOpen(true);
   return (
-    <div>
+    <div style={{ height: "470px", maxWidth: "1200px", margin: "0 auto" }}>
       <Button onClick={handleOpen}>Добавить категорию</Button>
       <AddProduct />
       <AddCategory open={open} handleClose={handleClose} />

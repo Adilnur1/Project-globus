@@ -48,7 +48,7 @@ const Auth = () => {
     event.preventDefault();
   };
   return (
-    <Container component="main" maxWidth="xs">
+    <Container component="main" maxWidth="xs" sx={{ height: "400px" }}>
       <Box
         sx={{
           marginTop: 8,
